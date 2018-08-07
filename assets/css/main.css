@@ -1,0 +1,60 @@
+/**
+ *Copyright (C) 2018 Klaus Schwarz
+ *
+ *This file is part of HisqisMailer.
+ *
+ *HisqisMailer is free software: you can redistribute it and/or modify
+ *it under the terms of the GNU General Public License as published by
+ *the Free Software Foundation, either version 3 of the License, or
+ *(at your option) any later version.
+ *
+ *HisqisMailer is distributed in the hope that it will be useful,
+ *but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *GNU General Public License for more details.
+ *
+ *You should have received a copy of the GNU General Public License
+ *along with HisqisMailer.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+/* Dimmed */
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 18pt;
+  line-height: 1.75em;
+  letter-spacing: 0.5px;
+}
+.dimmed{
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  border: #solid 10px #000;
+  background-color: rgba(35, 44, 44, 0.9);
+  position:absolute;
+  top:50%;
+  left:50%;
+  padding:35px;
+  padding-right: 75px;
+  padding-left: 90px;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+.dimmed p{
+  display: inline;
+  font-size: 12pt;
+  color: #ffffff;
+}
+.dimmed h2{
+  display: inline;
+  font-size: 0.7em;
+  font-weight: bold;
+  font-size: 32pt;
+	color: #FFFFFF;
+}
+
+.dimmed table{
+  color: #FFFFFF
+}
