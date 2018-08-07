@@ -1,7 +1,8 @@
 # Created by https://www.gitignore.io/api/ruby,linux,visualstudiocode
 
 # html folder
-/html/
+/html/*.html
+/html/*.list
 
 ### Linux ###
 *~
