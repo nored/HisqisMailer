@@ -21,4 +21,10 @@
 
 this sends u mails when u get some new grades...
 
-BUT you need linux...
+BUT you need linux... and cronjobs and environment variables and ruby + some gems
+
+I run it with a cronjob like
+
+``` 
+0 * * * * /path/to/getGrades.rb -p $PASS -u $USER >/dev/null 2>&1
+```
