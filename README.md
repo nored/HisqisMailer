@@ -42,7 +42,7 @@ All you need now to get set is a cronjob like:
 0 * * * * /path/to/getGrades.rb -p $QISPASS -u $QISUSER >/dev/null 2>&1
 ```
 
-Make a Nginx config like the following in your local lan and you'll get a super awesome overview page:
+Make a Nginx config like the following in your local lan and you'll get a super awesome overview page with multi user support:
 
 ```
 server {
