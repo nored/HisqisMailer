@@ -23,8 +23,37 @@ this sends u mails when u get some new grades...
 
 BUT you need linux... and cronjobs and environment variables and ruby + some gems
 
-I run it with a cronjob like
+```
+# for installation just install ruby, at least with your package manager
+# then run the following commands inside the HisqisMailer directory
+gem install bundler
+bundle install
+#
+# if you don't want your username and password in your bash history put
+# something like this in your .profile or .bashrc or .zshrc
+export QISUSER="myUserName"
+export QISPASS="myPassword"
+
+```
+
+All you need now to get set is a cronjob like:
 
 ``` 
-0 * * * * /path/to/getGrades.rb -p $PASS -u $USER >/dev/null 2>&1
+0 * * * * /path/to/getGrades.rb -p $QISPASS -u $QISUSER >/dev/null 2>&1
+```
+
+Make a Nginx config like the following in your local lan and you'll get a super awesome overview page:
+
+```
+server {
+        listen      80;
+        server_name grades.lan;
+        root /path/to/HisqisMailer/html/;
+        index index.html index.htm;
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+
+    }
 ```
