@@ -49,6 +49,9 @@ class HisqisMailer
     
     def initialize(user, pass, subject)
       @newValOverview = getValOverwiew(user, pass)
+      t = Time.now
+      t = t.utc + (60 * 60 * 2)
+      timestamp =  t.strftime("%d %B, %Y %k:%M")
       prettyHtml = %Q(<!DOCTYPE html>
         <html>
           <head>
@@ -79,7 +82,7 @@ class HisqisMailer
             </script>
             <div class="dimmed">
             <form class="form-signin">
-              <h2>Notenübersicht</h2>
+              <h2>Notenübersicht - #{timestamp}</h2>
               <br>
               <br>
               #{@newValOverview}
